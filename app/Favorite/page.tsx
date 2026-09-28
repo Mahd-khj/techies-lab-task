@@ -2,10 +2,11 @@
 import { useSearchParams } from "next/navigation";
 import List from "../components/list";
 import Favorites from "../components/favoriteCard"
-import toast from "react-hot-toast";
 import { useFavorite } from "../contexts/recipesContext";
+import LoadingCircleSpinner from "../components/loading"
+import { Suspense } from "react";
 
-export default function FavoritesPage() {
+function FavoritesContent() {
     const { Favorite } = useFavorite();
     const searchParams = useSearchParams();
     const search = searchParams.get("search")?.toLowerCase() ?? "";
@@ -41,5 +42,13 @@ export default function FavoritesPage() {
                 </List>
             )}
         </div>
+    )
+}
+
+export default function FavoritesPage() {
+    return (
+        <Suspense fallback={<LoadingCircleSpinner />}>
+            <FavoritesContent />
+        </Suspense>
     )
 }

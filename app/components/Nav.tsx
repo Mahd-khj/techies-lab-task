@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link"
 import SearchBar from "./search"
+import { Suspense } from "react";
 
 export default function Nav() {
     const pathname = usePathname();
@@ -40,7 +41,9 @@ export default function Nav() {
             </nav>
 
             <div className="ml-auto min-w-0">
-                <SearchBar />
+                <Suspense>
+                    <SearchBar />
+                </Suspense>
             </div>
         </header>
     )
