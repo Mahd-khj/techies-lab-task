@@ -49,7 +49,7 @@ export default function Favorites({item}: Props) {
                         </p>
                         <div className="flex flex-wrap gap-1 py-1">
                             {item.recipes.tags.map((tag) => (
-                                <span key={tag} className="border rounded-2xl p-1 ">
+                                <span key={tag} className="bg-black text-white text-sm border rounded-2xl p-1">
                                     {tag}
                                 </span>
                             ))}
