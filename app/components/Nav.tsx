@@ -21,8 +21,8 @@ export default function Nav() {
                     href="/"
                     className={`h-8 flex justify-center items-center rounded-xl px-2 text-sm sm:text-base ${
                         pathname === "/"
-                        ? "bg-black text-white"
-                        : "hover:bg-blue-500 text-black bg-[#FFA400] hover:text-white"
+                        ? "bg-black text-white border-t-4 border-l-4"
+                        : "hover:bg-blue-500 text-black bg-[#FFA400] hover:text-white border-b-4 border-r-4"
                         }`}
                 >
                     Home
@@ -31,8 +31,8 @@ export default function Nav() {
                     href="/Favorite"
                     className={`h-8 flex justify-center items-center rounded-xl px-2 text-sm sm:text-base ${
                         pathname === "/Favorite"
-                        ? "bg-black text-white"
-                        : "hover:bg-blue-500 text-black bg-[#FFA400] hover:text-white"
+                        ? "bg-black text-white border-t-4 border-l-4"
+                        : "hover:bg-blue-500 text-black bg-[#FFA400] hover:text-white  border-b-4 border-r-4"
                         }`}
                 >
                     Favorite

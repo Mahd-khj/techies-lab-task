@@ -95,7 +95,7 @@ const RecipeDisplay = ({recipes}: Props) => {
                         disabled={currentPage === 1}
                         className="border px-3 py-3 rounded-full disabled:hidden"
                     >
-                        <img className="w-2.5" src="/previous-svgrepo-com.svg" alt="previous" />
+                        <img className="w-2.5" src="previous-svgrepo-com.svg" alt="previous" />
                     </button>
 
                     {Array.from({ length: totalPages }, (_, i) => i+1).map((page) => (
@@ -113,7 +113,7 @@ const RecipeDisplay = ({recipes}: Props) => {
                         disabled={currentPage === totalPages}
                         className="border px-3 py-3 rounded-full disabled:hidden"
                     >
-                        <img className="w-2.5" src="/next-svgrepo-com.svg" alt="next" />
+                        <img className="w-2.5" src="next-svgrepo-com.svg" alt="next" />
                     </button>
                 </div>
             )}
